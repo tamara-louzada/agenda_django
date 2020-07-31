@@ -8,3 +8,6 @@ class Evento(models.Model):
     data_evento = models.DateTimeField()
     data_criacao = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        # força a tabela a chamar somente evento e não ter o core_
+        db_table = 'evento'
